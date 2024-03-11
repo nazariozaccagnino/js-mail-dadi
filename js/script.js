@@ -16,30 +16,39 @@ const addresses = [
     "twoflower@me.com",
     "punkis@comcast.net"
  ];
-// let mailButton = document.getElementById('mailTool');
-// mailButton.addEventListener('click', function(){
-//     let mailapp = document.getElementById('mailapp').classList;
-//     mailapp.className('d-none')
+let gameButton = document.getElementById('gamebtn');
+gameButton.addEventListener('click', function(){
+    let dicegame = document.getElementById('dicegame');
+    dicegame.classList.toggle('d-none');
 
-// })
+})
+let mailButton = document.getElementById('mailbtn');
+mailButton.addEventListener('click', function(){
+    let mailapp = document.getElementById('mailapp');
+    mailapp.classList.toggle('d-none');
+})
+
+
 let checkMailButton = document.getElementById('checkMail')
 checkMailButton.addEventListener('click', function() {
     let elEmailInput = document.getElementById('emailInput');
+    let mailOk = false;
     let emailInput = elEmailInput.value;
-    let elMessage = document.getElementById('message');
-    let message = '';
-        console.log(emailInput);
-    for (let i = 0; i < addresses.length; i++){
+    console.log(emailInput);
+    for (let i = 0; i <= addresses.length; i++){
         console.log(addresses)
         if (emailInput === addresses[i]){
-            console.log('ok')
-            message = `<div>Login effettuato</div>`
-        } else{
-            message = `<div>E-mail errata</div>`
+            mailOk = true
+            document.getElementById('message').innerHTML = 'OKKKK'       
+            elMessage.innerHTML = okmessage
         }
-        elMessage.innerHTML = message;
-    } 
-})
+        else {
+            document.getElementById('message').innerHTML = 'NOOOOO'
+          }
+        }
+    })
+    
+
 
     
 
