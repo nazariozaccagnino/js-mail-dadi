@@ -25,10 +25,19 @@ let mailButton = document.getElementById('mailTool');
 let checkMailButton = document.getElementById('checkMail')
 checkMailButton.addEventListener('click', function() {
     let elEmailInput = document.getElementById('emailInput');
-        let emailInput = elEmailInput.value;
+    let emailInput = elEmailInput.value;
+    let elMessage = document.getElementById('message');
+    let message = '';
         console.log(emailInput);
-    for (let i = 0; i < addresses.value; i++){
-        
+    for (let i = 0; i < addresses.length; i++){
+        console.log(addresses)
+        if (emailInput === addresses[i]){
+            console.log('ok')
+            message = `<div>OK</div>`
+        } else{
+            message = `<div>SBAGLIATO</div>`
+        }
+        elMessage.innerHTML = message;
     } 
 })
 
