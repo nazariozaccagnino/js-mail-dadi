@@ -27,18 +27,15 @@ checkMailButton.addEventListener('click', function() {
         console.log(addresses)
         if (emailInput === addresses[i]){
             mailOk = true
-            document.getElementById('message').innerHTML = 'OKKKK'       
+            document.getElementById('message').innerHTML = 'Login effettuato!'       
             elMessage.innerHTML = okmessage
         }
         else {
-            document.getElementById('message').innerHTML = 'NOOOOO'
+            document.getElementById('message').innerHTML = 'Email errata'
           }
         }
     })
-    
-
-
-    
+       
 
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
