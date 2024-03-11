@@ -14,24 +14,28 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col d-flex justify-content-center">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false" id="mailTool">Mail</button>
-                </div>
                 <div class="col d-flex justify-content-center">
                     <button type="button" class="btn btn-warning" id="dicesGame">Warning</button>
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
-                <div class="card" style="width: 50rem;">
+                <div class="card d-none" id="mailapp" style="width: 50rem;">
                     <div class="card-body">
                         <label for="exampleInputEmail1" class="form-label">Inserisci email</label>
                         <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         <button type="button" class="btn btn-warning" id="checkMail">Controlla</button>
-                        <div id="message"></div>
+                        <div id="message" class="mt-4"></div>
                     </div>
-                  </div>
+                                    
+                </div>
+                <div class="game text-center" style="width: 50rem;">
+                    <img src="img/dices/1.svg" alt="" id="img1">
+                    <img src="img/dices/1.svg" alt="" id="img2">
+                    <div id="result" class="text-center mt-4"></div>
+                </div>
                   
             </div>
 
