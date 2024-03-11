@@ -16,18 +16,6 @@ const addresses = [
     "twoflower@me.com",
     "punkis@comcast.net"
  ];
-let gameButton = document.getElementById('gamebtn');
-gameButton.addEventListener('click', function(){
-    let dicegame = document.getElementById('dicegame');
-    dicegame.classList.toggle('d-none');
-
-})
-let mailButton = document.getElementById('mailbtn');
-mailButton.addEventListener('click', function(){
-    let mailapp = document.getElementById('mailapp');
-    mailapp.classList.toggle('d-none');
-})
-
 
 let checkMailButton = document.getElementById('checkMail')
 checkMailButton.addEventListener('click', function() {
@@ -63,10 +51,9 @@ checkMailButton.addEventListener('click', function() {
 // console.log(playerDice);
 // let pcDice = Math.floor((Math.random() * 6) + 1 ) ;
 // console.log(pcDice);
-
-
-
-// for (let i = 1; i <= numbers.length; i++) {
+   
+    let shot = document.getElementById('shot')
+    shot.addEventListener('click', function() {    
     
     let playerDice = Math.floor((Math.random() * 6) + 1 ) ;
     console.log(playerDice);
@@ -77,6 +64,7 @@ checkMailButton.addEventListener('click', function() {
     dice1.setAttribute('src',`img/dices/${[pcDice]}.svg`)
     let dice2 = document.getElementById('img2');
     dice2.setAttribute('src',`img/dices/${[playerDice]}.svg`)
+    
     
     let elResult = document.getElementById('result');
     let tmpHtml = '';
@@ -91,4 +79,4 @@ checkMailButton.addEventListener('click', function() {
         tmpHtml = `<h1>l'utente ha vinto</h1>`
     }
     elResult.innerHTML = tmpHtml;
-// }
+})
